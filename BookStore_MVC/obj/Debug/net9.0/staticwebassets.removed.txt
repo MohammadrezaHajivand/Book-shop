@@ -1,0 +1,2 @@
+C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\Img\b1.jpg
+C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\Img\c1.png

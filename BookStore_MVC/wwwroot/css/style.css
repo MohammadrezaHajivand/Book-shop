@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'IRANSansX';
+    src: url('/fonts/woff2/IRANSansX-Regular.woff2') format('woff2'), url('/fonts/woff/IRANSansX-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    font-family: 'IRANSansX', sans-serif;
+}
+
+.navMenue {
+  list-style: none;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+.navMenue ul {
+  display: flex;
+  flex-direction: row-reverse;
+  list-style: none;
+  gap: 50px;
+  user-select: none;
+  color: 505b6a;
+}
+.navMenue ul li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 15px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+/*.navMenue ul li a:hover {
+  background-color: grey;
+}*/
+.navMenue ul button {
+  margin-right: 1010px;
+  padding: 3px 20px;
+  border-radius: 14px;
+  text-align: center;
+  border: none;
+  background-color: rgb(11, 58, 129);
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight:bold;
+}
+.bilbord {
+  background-color: rgba(23, 89, 187, 0.877);
+  margin: 50px 50px;
+  border-radius: 10px;
+  padding: 62px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  gap: 10px;
+}
+.bilbord h1 {
+  color: white;
+  font-weight: bold;
+}
+.bilbord p {
+  color: white;
+}
+.bilbord button {
+  border: none;
+  padding: 5px 13px;
+  background-color: white;
+  color: rgba(23, 89, 187, 0.877);
+  font-size: medium;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.bilbord button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.categories {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.categories h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.categoriesBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category {
+  display: block;
+  width: 200px;
+  height: 80px;
+  padding: 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.category p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.latest-books {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.latest-books h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.book-card {
+  width: 180px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.book-card h3 {
+  font-size: 16px;
+  margin: 10px 0 4px;
+  color: #222;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.book-card span {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #007bff;
+}
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "IRANSans", sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00bcd4;
+  transform: scale(1.2);
+}

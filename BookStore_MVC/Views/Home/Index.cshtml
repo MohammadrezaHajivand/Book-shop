@@ -1,0 +1,52 @@
+﻿@model BookCategoryVm
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    
+
+
+<div class="bilbord">
+    <h1>هرکتابی که میخوای ، اینجا هست</h1>
+    <p>
+        با بیش از 100.000 عنوان کتاب در دسته بندی های مختلف،سفرمطالعاتی خود را آغاز
+        کنید.
+    </p>
+    <button>مشاهده پرفروش ها</button>
+</div>
+<section class="categories">
+    <h1>دسته‌بندی‌ها</h1>
+    <div class="categoriesBox">
+        @{
+            var colors = new[] { "#ffcccc", "#d1e0e0", "#ffecb3", "#ecb3ff", "#b3ffec" };
+            int i = 0;
+            foreach(var item in Model.Categories)
+            {
+                <a href="#" class="category" style="background-color: @colors[i]">
+                    @*<img src="@item.ImgUrl" alt="Alternate Text" width="50px" />*@
+                    <h2>@item.Name</h2>
+                    <p>@item.Description</p>
+                </a>
+                i++;
+            }
+        }
+    </div>
+</section>
+<section class="latest-books">
+    <h2>جدیدترین کتاب‌ها</h2>
+    <div class="book-list">
+        @{
+            foreach(var item in Model.Books)
+            {
+                <div class="book-card">
+                    <img src="@item.img.ImageUrl" alt="@item.BookName" />
+                    <h3>@item.BookName</h3>
+                    <p>@item.AuthorName</p>
+                    <p>@item.PageCount صفحه</p>
+                    <span>@item.Price تومان</span>
+
+                </div>
+            }
+        }
+    </div>
+</section>

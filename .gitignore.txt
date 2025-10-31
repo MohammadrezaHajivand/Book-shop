@@ -1,0 +1,10 @@
+# پوشه‌های بی‌ربط به کنترل نسخه
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.log
+*.db
+*.DS_Store
+*.vscode/
