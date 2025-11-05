@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class Book:BaseEntity
+    public class Book : BaseEntity
     {
-        public int Id { get; set; }
+
         public string Name { get; set; }
         public string AuthorName { get; set; }
         public decimal Price { get; set; }

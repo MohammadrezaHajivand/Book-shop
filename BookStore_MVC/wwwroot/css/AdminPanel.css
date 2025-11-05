@@ -1,0 +1,145 @@
+﻿/* --- Color Palette --- */
+:root {
+    --color-background: #c9d9c3; /* Light background */
+    --color-dark: #383330; /* Dark text/accents */
+    --color-primary: #a96255; /* Button/Accent color (Warm) */
+    --color-sidebar: #383330; /* Sidebar background */
+    --color-sidebar-text: #f0f0f0; /* Light text for dark sidebar */
+    --color-card-bg: #ffffff; /* Card background */
+}
+
+/* --- Global Reset & Body --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+/* --- Main Layout Container (Flexbox for Sidebar & Main) --- */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Sidebar Styles --- */
+.sidebar {
+    width: 250px;
+    background-color: var(--color-sidebar);
+    color: var(--color-sidebar-text);
+    padding: 20px 0;
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 30px;
+    color: white; /* A slightly lighter shade for logo */
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav li {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+    .sidebar nav li:hover,
+    .sidebar nav li.active {
+        background-color: var(--color-primary);
+        color: white;
+    }
+
+.sidebar nav a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* --- Main Content Styles --- */
+.main-content {
+    flex-grow: 1; /* Takes up the remaining space */
+    padding: 30px;
+}
+
+    .main-content h1 {
+        color: var(--color-dark);
+        margin-bottom: 30px;
+        border-bottom: 2px solid var(--color-primary);
+        padding-bottom: 10px;
+    }
+
+/* --- Card Container & Individual Cards --- */
+.card-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.management-card {
+    background-color: var(--color-card-bg);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    flex: 1; /* Distribute space equally */
+    min-width: 300px;
+}
+
+    .management-card h2 {
+        color: var(--color-primary);
+        margin-bottom: 10px;
+    }
+
+    .management-card p {
+        color: var(--color-dark);
+        margin-bottom: 20px;
+    }
+
+/* --- Button Styles --- */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: #8e4f42; /* A slightly darker shade on hover */
+        transform: translateY(-1px);
+    }
+
+.btn-secondary {
+    background-color: #cccccc; /* A neutral color for secondary actions */
+    color: var(--color-dark);
+}
+
+    .btn-secondary:hover {
+        background-color: #bbbbbb;
+        transform: translateY(-1px);
+    }
+
+/* --- Content Area --- */
+.content-area {
+    background-color: var(--color-card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}

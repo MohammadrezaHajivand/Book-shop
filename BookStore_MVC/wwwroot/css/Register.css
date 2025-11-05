@@ -1,0 +1,111 @@
+﻿html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Segoe UI", sans-serif;
+    overflow: hidden;
+}
+
+.registerPage {
+    display: flex;
+    height: 80vh;
+    margin: 100px 200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+}
+
+.wallpaper {
+    flex: 1;
+    /*background-color: #383330;*/
+    background-image: url("/Img/login.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    user-select: none;
+}
+
+.wallpaperContent {
+    max-width: 400px;
+    text-align: center;
+}
+
+    .wallpaperContent h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .wallpaperContent p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+.formHolder {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    user-select: none;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+}
+
+    form h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6f927f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+    button:hover {
+        background-color: #a96255;
+    }
+
+.terms,
+.loginLink {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
+
+a {
+    color: #6c4bd6;
+    text-decoration: none;
+}

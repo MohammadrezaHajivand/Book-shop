@@ -26,6 +26,7 @@ C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\jquery\LIC
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\favicon.ico
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\css\style.css
+C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\css\Register.css
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\jquery\dist\jquery.slim.min.map
@@ -41,6 +42,7 @@ C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\jquery\dis
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\css\AdminPanel.css
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\jquery-validation\dist\jquery.validate.js
@@ -61,6 +63,8 @@ C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\jquery-val
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
 C:\Users\Lenovo\Desktop\c#\h17(1)\BookStore\BookStore_MVC\wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\css\AdminPanel.css
+wwwroot\css\Register.css
 wwwroot\css\site.css
 wwwroot\css\style.css
 wwwroot\favicon.ico
@@ -84,6 +88,7 @@ wwwroot\fonts\woff2\IRANSansX-Thin.woff2
 wwwroot\fonts\woff2\IRANSansX-UltraLight.woff2
 wwwroot\Img\gh.jpg
 wwwroot\Img\j.jpg
+wwwroot\Img\login.png
 wwwroot\Img\m.jpg
 wwwroot\Img\sh.jpg
 wwwroot\Img\t.jpg

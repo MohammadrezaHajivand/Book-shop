@@ -8,7 +8,6 @@ namespace Domain.Entities
 {
     public class BookImg:BaseEntity
     {
-        public int Id { get; set; }
         public string ImageUrl { get; set; }
         public bool IsMainImg { get; set; }
 
