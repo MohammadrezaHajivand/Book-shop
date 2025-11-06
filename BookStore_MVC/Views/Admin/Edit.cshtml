@@ -1,0 +1,49 @@
+﻿@model EditUserVm;
+@{
+    Layout = "AdminLayout";
+}
+<div class="edit-form-container">
+    <div class="form-header">
+        <h2>Editing User : @Model.Username</h2>
+    </div>
+
+    <form asp-action="Edit" method="post" asp asp-controller="Admin">
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Family">Family</label>
+            <input asp-for="Family" class="form-control" />
+            <span asp-validation-for="Family" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" class="form-control readonly-input" readonly />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Username">Username</label>
+            <input asp-for="Username" class="form-control readonly-input" readonly />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Password">New Password</label>
+            <input asp-for="Password" type="password" class="form-control" placeholder="Enter the new password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+
+        <div class="toolbar-edit">
+            <button asp-controller="Admin" asp-action="Edit" type="submit" class="btn btn-save">Submit</button>
+            <a asp-action="Index" class="btn btn-back">Cansel</a>
+        </div>
+    </form>
+</div>

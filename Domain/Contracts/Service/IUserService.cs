@@ -1,13 +1,13 @@
-﻿using Domain.Entities;
+﻿using Domain.Dto;
+using Domain.Entities;
 
 namespace Domain.Contracts.Service
 {
     public interface IUserService
     {
-        List<User> GetAllUsers();
-        User GetUserById(int id);
-        bool CreateUser(User user);
-        int UpdateUser(User user);
+        List<GetUserDto> GetAllUsers();
+        GetUserDto GetUserById(int id);
+        int UpdateUser(GetUserDto user);
         bool DeleteUser(int id);
     }
 }

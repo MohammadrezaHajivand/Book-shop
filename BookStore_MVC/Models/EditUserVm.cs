@@ -1,16 +1,12 @@
-﻿using Domain.Enums;
-
-namespace Domain.Entities
+﻿namespace BookStore_MVC.Models
 {
-    public class User : BaseEntity
+    public class EditUserVm
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Family { get; set; }
         public string Email { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public Role Role { get; set; }
-        public bool IsActive { get; set; } = true;
-        public DateTime CreatedAt { get; set; }
     }
 }

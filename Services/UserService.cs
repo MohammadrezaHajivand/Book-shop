@@ -1,5 +1,6 @@
 ﻿using Domain.Contracts.Repositroy;
 using Domain.Contracts.Service;
+using Domain.Dto;
 using Domain.Entities;
 
 namespace Services
@@ -7,37 +8,52 @@ namespace Services
 
     public class UserService(IUserRepository _userRepository) : IUserService
     {
-        List<User> IUserService.GetAllUsers()
+        public List<GetUserDto> GetAllUsers()
         {
-            return _userRepository.GetAll();
-        }
-
-        public User GetUserById(int id)
-        {
-
-            return _userRepository.GetById(id);
-        }
-
-        public bool CreateUser(User user)
-        {
-
-            if (_userRepository.GetAll().Any(u => u.Username == user.Username))
+            var users = _userRepository.GetAll();
+            return users.Select(u => new GetUserDto
             {
-
-                return false;
-            }
-
-            _userRepository.Add(user);
-
-
-            int rowsAffected = _userRepository.Save();
-            return rowsAffected > 0;
+                Id = u.Id,
+                Name = u.Name,
+                Family = u.Family,
+                Email = u.Email,
+                Username = u.Username,
+                Password = u.Password,
+                Role = u.Role,
+                CreatedAt = u.CreatedAt,
+            }).ToList()!;
         }
 
-        public int UpdateUser(User user)
+        public GetUserDto GetUserById(int id)
         {
 
-            _userRepository.Update(user);
+            var user = _userRepository.GetById(id);
+            return new GetUserDto
+            {
+                Id = user.Id,
+                Name = user.Name,
+                Family = user.Family,
+                Username = user.Username,
+                Password = user.Password,
+                Email = user.Email,
+                Role = user.Role,
+            };
+        }
+
+        public int UpdateUser(GetUserDto user)
+        {
+            var updatedUser = new User
+            {
+                Id = user.Id,
+                Name = user.Name,
+                Family = user.Family,
+                Email = user.Email,
+                Username = user.Username,
+                Password = user.Password,
+                Role = user.Role,
+            };
+
+            _userRepository.Update(updatedUser);
 
 
             return _userRepository.Save();
@@ -45,11 +61,7 @@ namespace Services
 
         public bool DeleteUser(int id)
         {
-
-
             _userRepository.Delete(id);
-
-
             int rowsAffected = _userRepository.Save();
             return rowsAffected > 0;
         }

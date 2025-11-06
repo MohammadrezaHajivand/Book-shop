@@ -14,7 +14,7 @@ namespace Infrastructure.Repositories
 
         public void Delete(int id)
         {
-           var user= context.Users.FirstOrDefault(u => u.Id == id)!;
+            var user = context.Users.FirstOrDefault(u => u.Id == id);
             if (user != null)
             {
                 context.Users.Remove(user);
@@ -28,7 +28,7 @@ namespace Infrastructure.Repositories
 
         public User GetById(int id)
         {
-            return context.Users.FirstOrDefault(u=>u.Id == id)!;
+            return context.Users.FirstOrDefault(u => u.Id == id)!;
         }
         public void Update(User user)
         {

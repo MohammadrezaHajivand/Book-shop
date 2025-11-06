@@ -1,7 +1,8 @@
-﻿@{
+﻿@model ManageUserVm;
+@{
     Layout = "AdminLayout";
 }
-<h1>System Overview</h1>
+@*<h1>System Overview</h1>
 
 
 <div class="card-container">
@@ -24,4 +25,76 @@
         Select an option from the sidebar or click a button above to manage
         settings.
     </p>
+</div>*@
+
+
+
+
+
+<div class="content-area">
+    <h1>Users List</h1>
+
+    <div class="toolbar">
+
+        <a asp-action="CreateUser" class="btn btn-primary"> + Add new user</a>
+    </div>
+
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Membership Date</th>
+                <th>processes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Users != null && Model.Users.Any())
+            {
+                foreach (var user in Model.Users)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Username</td>
+                        <td>@user.Email</td>
+                        <td>@user.Role</td>
+                        <td>
+                            @if (user.IsActive)
+                            {
+                                <span class="badge active">Active</span>
+                            }
+                            else
+                            {
+                                <span class="badge inactive">InActive</span>
+                            }
+                        </td>
+                        <td>@user.CreatedAt</td>
+                        <td class="actions">
+                            <a asp-action="Edit"
+                               asp-route-id="@user.Id"
+                               class="btn btn-secondary">Edit</a>
+                            <form asp-action="DeleteUser" asp-route-id="@user.Id" method="post" style="display:inline;">
+                                <button type="submit" class="btn btn-danger">Remove</button>
+                            </form>
+
+
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" style="text-align: center">No user found</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
 </div>
+
